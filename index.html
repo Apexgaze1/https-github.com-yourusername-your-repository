@@ -16,7 +16,7 @@
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"NeatHarbor Goods"}</script>
 </head>
 <body>
-<div class="top">NeatHarbor Goods • Email alerts members: 20% off qualifying Square orders over $30 with code NEAT20</div>
+<div class="top">NeatHarbor Goods • Email members unlock 20% off qualifying orders over $30 with code NEAT20</div>
 <header><div class="w nav"><a class="brand" href="#home">NeatHarbor <span>Goods</span></a><nav><a href="#hot">Hot Sale</a><a href="#launch">Launch Picks</a><a href="#alerts">Email Alerts</a><a href="#new">New Products</a><a href="#shop">Shop</a><a href="#shipping">Shipping</a><a href="#returns">Returns</a><a href="#about">About</a><a href="#contact">Contact</a></nav><a class="btn" href="#shop">Shop now</a></div></header>
 <main id="home">
 <section class="hero"><div class="w heroGrid"><div><div class="ey">Practical organization</div><h1>Clear the clutter.<br>Make room for life.</h1><p class="lead">Useful products for travel, work, kitchens, closets and small spaces, with secure checkout through Square.</p><div class="actions"><a class="btn" href="#shop">Shop all products</a><button class="btn ghost" onclick="shareSite()">Share NeatHarbor</button></div></div><div class="box"><div class="ey">NeatHarbor Goods</div><h2>Simple products. Useful purpose.</h2><p class="lead">A focused catalog built around clear everyday organization problems.</p></div></div></section>
@@ -25,15 +25,15 @@
 <section id="hot"><div class="w">
   <div class="ey">Hot items</div>
   <h2>Member sale picks</h2>
-  <p class="lead">Email-alert members can use <b>NEAT20</b> for 20% off an eligible order over $30 when the coupon is accepted at Square checkout.</p>
+  <p class="lead">Email-alert members unlock <b>NEAT20</b> for 20% off eligible merchandise over $30. NeatHarbor generates a discounted Square-hosted checkout so the offer does not depend on Square’s percentage-coupon field.</p>
   <div class="hotgrid">
     <article class="hotcard">
       <div class="hotimg" role="img" aria-label="Refrigerator and Freezer Organizer" style="background-position:100% 0%"></div>
-      <div><span class="save">20% member offer</span><h3>Refrigerator / Freezer Organizer</h3><div><span class="was">$38.99</span> <span class="saleprice">$31.19</span></div><p class="small">Member price after a valid 20% checkout discount.</p><a class="buy" target="_blank" rel="noopener noreferrer" href="https://square.link/u/4WFYULmG">Shop with Square</a></div>
+      <div><span class="save">20% member offer</span><h3>Refrigerator / Freezer Organizer</h3><div><span class="was">$38.99</span> <span class="saleprice">$31.19</span></div><p class="small">Member price after the NeatHarbor 20% website discount.</p><button class="buy" type="button" onclick="memberCheckout('refrigerator-freezer-organizer',this)">Member checkout — $31.19</button><p class="small"><a target="_blank" rel="noopener noreferrer" href="https://square.link/u/4WFYULmG">Regular $38.99 checkout</a></p></div>
     </article>
     <article class="hotcard">
       <div class="hotimg" role="img" aria-label="Multifunction Vegetable Slicer" style="background-position:50% 100%"></div>
-      <div><span class="save">20% member offer</span><h3>Multifunction Vegetable Slicer</h3><div><span class="was">$32.99</span> <span class="saleprice">$26.39</span></div><p class="small">Member price after a valid 20% checkout discount.</p><a class="buy" target="_blank" rel="noopener noreferrer" href="https://square.link/u/TW5CU6OR">Shop with Square</a></div>
+      <div><span class="save">20% member offer</span><h3>Multifunction Vegetable Slicer</h3><div><span class="was">$32.99</span> <span class="saleprice">$26.39</span></div><p class="small">Member price after the NeatHarbor 20% website discount.</p><button class="buy" type="button" onclick="memberCheckout('vegetable-slicer',this)">Member checkout — $26.39</button><p class="small"><a target="_blank" rel="noopener noreferrer" href="https://square.link/u/TW5CU6OR">Regular $32.99 checkout</a></p></div>
     </article>
   </div>
   <div class="actions"><a class="btn" href="#alerts">Unlock NEAT20</a><a class="btn ghost" href="#new">See new products</a></div>
@@ -72,7 +72,7 @@
       </div>
       <label class="consent"><input id="alertsConsent" type="checkbox" required> <span>I agree to receive promotional email alerts from NeatHarbor Goods. I can unsubscribe from future marketing messages at any time.</span></label>
       <div id="promoResult" class="promo-result" role="status" aria-live="polite"></div>
-      <p class="promo-note">Discount applies only when the Square checkout coupon is active and the qualifying order exceeds $30. One coupon per payment-link checkout. Taxes, shipping and other charges may not count toward the minimum purchase.</p>
+      <p class="promo-note">The regular merchandise subtotal must be over $30. After signup, NeatHarbor generates an eligible Square-hosted checkout with the 20% discount already included. Taxes, shipping and other charges do not increase the merchandise subtotal used to qualify.</p>
     </form>
   </div>
 </div></section>
@@ -84,10 +84,10 @@
   <div class="notice"><b>Order note:</b> checkout is handled by Square. Delivery timing and destination availability vary by product. Supplier fulfillment automation is being finalized and is not represented here as guaranteed.</div>
   <div class="previewgrid">
     <article class="preview-card" id="no-drill-suction-hooks"><div class="preview-visual" role="img" aria-label="No-Drill Suction Hooks" style="background-image:url('assets/new-products.webp');background-position:0% 0%"></div><span class="available">Square checkout</span><h3>No-Drill Suction Hooks</h3><p>Add useful hanging storage to kitchens, bathrooms and small spaces without drilling.</p><div class="price">$22.99</div><a class="buy" target="_blank" rel="noopener noreferrer" href="https://square.link/u/f7Dkdggx">Buy Now with Square</a></article>
-    <article class="preview-card" id="under-bed-shoe-organizer"><div class="preview-visual" role="img" aria-label="Under-Bed Shoe Organizer" style="background-image:url('assets/new-products.webp');background-position:50% 0%"></div><span class="available">Square checkout</span><h3>Under-Bed Shoe Organizer</h3><p>Turn unused under-bed space into organized shoe storage for closets and bedrooms.</p><div class="price">$35.99</div><a class="buy" target="_blank" rel="noopener noreferrer" href="https://square.link/u/NbY9IaH9">Buy Now with Square</a></article>
-    <article class="preview-card" id="refrigerator-freezer-organizer"><div class="preview-visual" role="img" aria-label="Refrigerator and Freezer Organizer" style="background-image:url('assets/new-products.webp');background-position:100% 0%"></div><span class="available">Square checkout</span><h3>Refrigerator / Freezer Organizer</h3><p>Clear storage with a drain-tray design for easier refrigerator and freezer organization.</p><div class="price">$38.99</div><a class="buy" target="_blank" rel="noopener noreferrer" href="https://square.link/u/4WFYULmG">Buy Now with Square</a></article>
+    <article class="preview-card" id="under-bed-shoe-organizer"><div class="preview-visual" role="img" aria-label="Under-Bed Shoe Organizer" style="background-image:url('assets/new-products.webp');background-position:50% 0%"></div><span class="available">Square checkout</span><h3>Under-Bed Shoe Organizer</h3><p>Turn unused under-bed space into organized shoe storage for closets and bedrooms.</p><div class="price">$35.99</div><a class="buy" target="_blank" rel="noopener noreferrer" href="https://square.link/u/NbY9IaH9">Buy Now with Square</a><button class="buy ghost" type="button" style="margin-top:8px;width:100%" onclick="memberCheckout('under-bed-shoe-organizer',this)">Member 20% checkout — $28.79</button></article>
+    <article class="preview-card" id="refrigerator-freezer-organizer"><div class="preview-visual" role="img" aria-label="Refrigerator and Freezer Organizer" style="background-image:url('assets/new-products.webp');background-position:100% 0%"></div><span class="available">Square checkout</span><h3>Refrigerator / Freezer Organizer</h3><p>Clear storage with a drain-tray design for easier refrigerator and freezer organization.</p><div class="price">$38.99</div><a class="buy" target="_blank" rel="noopener noreferrer" href="https://square.link/u/4WFYULmG">Buy Now with Square</a><button class="buy ghost" type="button" style="margin-top:8px;width:100%" onclick="memberCheckout('refrigerator-freezer-organizer',this)">Member 20% checkout — $31.19</button></article>
     <article class="preview-card" id="sink-drain-organizer"><div class="preview-visual" role="img" aria-label="Kitchen Sink Organizer" style="background-image:url('assets/new-products.webp');background-position:0% 100%"></div><span class="available">Square checkout</span><h3>Kitchen Sink Organizer</h3><p>Keep sponges, soap and everyday sink items together in a cleaner, more useful station.</p><div class="price">$27.99</div><a class="buy" target="_blank" rel="noopener noreferrer" href="https://square.link/u/0FYeZNWc">Buy Now with Square</a></article>
-    <article class="preview-card" id="vegetable-slicer"><div class="preview-visual" role="img" aria-label="Multifunction Vegetable Slicer" style="background-image:url('assets/new-products.webp');background-position:50% 100%"></div><span class="available">Square checkout</span><h3>Multifunction Vegetable Slicer</h3><p>A compact kitchen-prep tool designed to simplify slicing and chopping tasks.</p><div class="price">$32.99</div><a class="buy" target="_blank" rel="noopener noreferrer" href="https://square.link/u/TW5CU6OR">Buy Now with Square</a></article>
+    <article class="preview-card" id="vegetable-slicer"><div class="preview-visual" role="img" aria-label="Multifunction Vegetable Slicer" style="background-image:url('assets/new-products.webp');background-position:50% 100%"></div><span class="available">Square checkout</span><h3>Multifunction Vegetable Slicer</h3><p>A compact kitchen-prep tool designed to simplify slicing and chopping tasks.</p><div class="price">$32.99</div><a class="buy" target="_blank" rel="noopener noreferrer" href="https://square.link/u/TW5CU6OR">Buy Now with Square</a><button class="buy ghost" type="button" style="margin-top:8px;width:100%" onclick="memberCheckout('vegetable-slicer',this)">Member 20% checkout — $26.39</button></article>
     <article class="preview-card" id="broom-mop-organizer"><div class="preview-visual" role="img" aria-label="Broom and Mop Wall Organizer" style="background-image:url('assets/new-products.webp');background-position:100% 100%"></div><span class="available">Square checkout</span><h3>Broom & Mop Wall Organizer</h3><p>Create vertical storage for cleaning tools in laundry rooms, closets and utility areas.</p><div class="price">$22.99</div><a class="buy" target="_blank" rel="noopener noreferrer" href="https://square.link/u/nyQtzyiD">Buy Now with Square</a></article>
   </div>
   <div class="actions"><a class="btn" href="https://www.facebook.com/profile.php?id=61594389339345" target="_blank" rel="noopener noreferrer">Follow NeatHarbor on Facebook</a><a class="btn ghost" href="#shop">Shop original catalog</a></div>
@@ -113,7 +113,7 @@
       <div><span>Multifunction Vegetable Slicer</span><strong>$26.39 with valid 20% discount</strong></div>
     </div>
     <div class="actions"><a id="saleJoin" class="btn" href="#alerts">Sign up & unlock code</a><a class="btn ghost" href="#hot">View hot items</a></div>
-    <p class="promo-note">Offer applies only if the NEAT20 coupon is enabled and accepted by Square checkout. Taxes, shipping, and other charges may not count toward the minimum purchase.</p>
+    <p class="promo-note">NEAT20 is verified on the NeatHarbor website. For eligible items, NeatHarbor creates a Square-hosted checkout with the 20% discount built into the order. The regular merchandise subtotal must exceed $30.</p>
   </div>
 </div>
 
@@ -134,6 +134,28 @@ function draw(){let s=q.value.toLowerCase();grid.innerHTML=P.filter(p=>(cat==='a
 q.addEventListener('input',draw);document.querySelectorAll('.filter').forEach(b=>b.onclick=()=>{document.querySelectorAll('.filter').forEach(x=>x.classList.remove('on'));b.classList.add('on');cat=b.dataset.f;draw()});draw();if(location.hash){setTimeout(()=>{const el=document.querySelector(location.hash);if(el)el.scrollIntoView({behavior:'smooth',block:'center'});},150);}
 async function shareSite(){try{if(navigator.share)await navigator.share({title:'NeatHarbor Goods',text:'Clear the clutter. Make room for life.',url:location.href});else{await navigator.clipboard.writeText(location.href);alert('Link copied.')}}catch(e){}}
 const alertsForm=document.getElementById('alertsForm');
-if(alertsForm){alertsForm.addEventListener('submit',async(e)=>{e.preventDefault();const email=document.getElementById('alertsEmail').value.trim();const consent=document.getElementById('alertsConsent').checked;const out=document.getElementById('promoResult');out.style.display='block';out.textContent='Signing you up…';try{const r=await fetch('https://lawful-barren-virtualmachine--neatharborgoods.replit.app/api/subscribe',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email,consent,source:'neatharbor-website'})});const data=await r.json().catch(()=>({}));if(!r.ok||!data.success)throw new Error(data.error||'Signup could not be completed.');const code=data.promo_code||'NEAT20';out.innerHTML='<b>Thanks for signing up.</b><br>Your 20% code for qualifying orders over $30 is <div class="promo-code">'+code+'</div><span class="small">Enter the code in the coupon field on an eligible Square checkout.</span>';localStorage.setItem('neatharbor-alerts-member','1');}catch(err){out.innerHTML='<b>Signup is temporarily unavailable.</b><br><span class="small">Please try again shortly. No discount code has been issued yet.</span>';}});}const saleModal=document.getElementById('saleModal'),saleClose=document.getElementById('saleClose'),saleJoin=document.getElementById('saleJoin');function closeSale(){saleModal.classList.remove('show');localStorage.setItem('neatharbor-sale-seen',String(Date.now()));}if(saleClose)saleClose.onclick=closeSale;if(saleJoin)saleJoin.onclick=closeSale;if(saleModal&&!localStorage.getItem('neatharbor-alerts-member')){const seen=Number(localStorage.getItem('neatharbor-sale-seen')||0);if(Date.now()-seen>43200000)setTimeout(()=>saleModal.classList.add('show'),1800);}if(saleModal)saleModal.addEventListener('click',e=>{if(e.target===saleModal)closeSale();});
+if(alertsForm){alertsForm.addEventListener('submit',async(e)=>{e.preventDefault();const email=document.getElementById('alertsEmail').value.trim();const consent=document.getElementById('alertsConsent').checked;const out=document.getElementById('promoResult');out.style.display='block';out.textContent='Signing you up…';try{const r=await fetch('https://lawful-barren-virtualmachine--neatharborgoods.replit.app/api/subscribe',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email,consent,source:'neatharbor-website'})});const data=await r.json().catch(()=>({}));if(!r.ok||!data.success)throw new Error(data.error||'Signup could not be completed.');const code=data.promo_code||'NEAT20';if(!data.promo_access_token)throw new Error('Member checkout token was not returned.');out.innerHTML='<b>Thanks for signing up.</b><br>Your NeatHarbor member code is <div class="promo-code">'+code+'</div><span class="small">Use the Member checkout buttons on eligible $30+ products. Your Square-hosted checkout will show the discounted total.</span>';localStorage.setItem('neatharbor-alerts-member','1');localStorage.setItem('neatharbor-promo-token',data.promo_access_token);}catch(err){out.innerHTML='<b>Signup is temporarily unavailable.</b><br><span class="small">Please try again shortly. No discount code has been issued yet.</span>';}});}const saleModal=document.getElementById('saleModal'),saleClose=document.getElementById('saleClose'),saleJoin=document.getElementById('saleJoin');function closeSale(){saleModal.classList.remove('show');localStorage.setItem('neatharbor-sale-seen',String(Date.now()));}if(saleClose)saleClose.onclick=closeSale;if(saleJoin)saleJoin.onclick=closeSale;if(saleModal&&!localStorage.getItem('neatharbor-alerts-member')){const seen=Number(localStorage.getItem('neatharbor-sale-seen')||0);if(Date.now()-seen>43200000)setTimeout(()=>saleModal.classList.add('show'),1800);}if(saleModal)saleModal.addEventListener('click',e=>{if(e.target===saleModal)closeSale();});
+async function memberCheckout(productId,btn){
+  const token=localStorage.getItem('neatharbor-promo-token');
+  if(!token){
+    document.getElementById('alerts').scrollIntoView({behavior:'smooth',block:'start'});
+    const out=document.getElementById('promoResult');out.style.display='block';out.innerHTML='<b>Join NeatHarbor alerts first.</b><br><span class="small">Enter your email and consent above to unlock the member checkout.</span>';
+    return;
+  }
+  const original=btn.textContent;btn.disabled=true;btn.textContent='Creating secure Square checkout…';
+  try{
+    const r=await fetch('https://lawful-barren-virtualmachine--neatharborgoods.replit.app/api/member-checkout',{
+      method:'POST',
+      headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({product_id:productId,promo_code:'NEAT20',promo_access_token:token})
+    });
+    const data=await r.json().catch(()=>({}));
+    if(!r.ok||!data.checkout_url)throw new Error(data.error||'Member checkout is temporarily unavailable.');
+    window.location.href=data.checkout_url;
+  }catch(err){
+    alert(err.message||'Member checkout is temporarily unavailable.');
+    btn.disabled=false;btn.textContent=original;
+  }
+}
 </script>
 </body></html>
