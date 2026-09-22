@@ -1,191 +1,237 @@
-<div align="center">
-
 # NeatHarbor Goods
 
-### Clear the clutter. Make room for life.
+> **Clear the clutter. Make room for life.**
 
-**A practical, organization-first online storefront for making everyday spaces simpler, calmer, and easier to use.**
+A lightweight, mobile-friendly ecommerce storefront for practical organization products across home, kitchen, closets, travel, work, and tech — with product-specific Square-hosted checkout.
 
-[Visit the Live Storefront](https://apexgaze1.github.io/https-github.com-yourusername-your-repository/)
-
-</div>
+**Storefront:** https://apexgaze1.github.io/https-github.com-yourusername-your-repository/
 
 ---
 
-## Why NeatHarbor
+## Overview
 
-Clutter is rarely one big problem. It is usually a collection of small frustrations: cables that never stay put, drawers that lose their order, crowded cabinets, wasted closet space, and everyday items that never seem to have a home.
+NeatHarbor Goods is built around a simple operating idea: make useful organization products easy to discover, understand, and purchase without unnecessary checkout complexity.
 
-**NeatHarbor Goods is built around those small problems.**
+This repository contains the customer-facing NeatHarbor storefront and supporting assets. The current implementation emphasizes a focused catalog, mobile usability, secure external payment processing, clear customer-service information, and conservative production-readiness rules.
 
-The storefront focuses on practical organization products for home, travel, work, kitchens, closets, tech, and small spaces. The goal is not to make exaggerated promises. It is to make useful products easier to discover, understand, and purchase through a straightforward shopping experience.
+## Current Status
 
-> **Simple products. Useful purpose. Secure checkout.**
+| Area | Status | Notes |
+| --- | --- | --- |
+| Storefront | Active | GitHub Pages storefront |
+| Product catalog | Active | Product cards, search/filtering and NHG shop codes |
+| Regular Square checkout | Integrated | Product-specific Square-hosted checkout links are present |
+| Payment-security messaging | Active | Customers are directed to Square for payment |
+| Customer-help chatbot | Active | Handles basic store and policy questions |
+| Email-alert signup | Integrated | Requires explicit marketing consent |
+| NEAT20 member checkout | **Verification pending** | Do not promote as a verified discount until a real discounted Square checkout is confirmed |
+| Automated supplier fulfillment | **Verification gated** | Must remain fail-closed unless exact variant mapping and bridge readiness are verified |
 
-## What Makes the Storefront Different
+> **Production rule:** “present in the code” is not the same as “verified end to end.”
 
-| Focus | NeatHarbor approach |
-| --- | --- |
-| Product discovery | Focused organization catalog instead of an everything-store experience |
-| Shopping | Mobile-friendly browsing, search, categories, and quick product codes |
-| Checkout | Product-specific Square-hosted checkout |
-| Payment safety | Customers are directed away from sharing sensitive payment credentials in chat, email, or social media |
-| Product identity | Standardized `NHG-` product codes |
-| Customer help | Built-in assistance for common store, shipping, return, checkout, and product questions |
-| Promotions | Promotional claims remain restricted until their checkout behavior is verified |
-| Operations | Payment readiness and fulfillment readiness are treated as separate verification gates |
+## Customer Experience
 
-## Storefront Highlights
+The storefront currently provides:
 
-- Responsive storefront designed for desktop and mobile
-- Curated organization catalog spanning home, kitchen, closet, travel, and tech use cases
-- Product search and category filtering
-- Quick Shop using standardized `NHG-` product codes
+- Responsive shopping for desktop and mobile
+- Featured and Hot Sale product presentation
+- Search and category filtering
+- Standardized `NHG-` product/shop codes
 - Product-specific Square checkout links
-- Hot Sale merchandising area
-- Refined product presentation
 - Shipping and return information
-- Consent-based email-alert signup
-- Built-in customer-help chatbot
-- Secure-payment guidance throughout the customer journey
-- Shareable storefront links with campaign attribution support
+- Payment-security guidance
+- Email-alert signup with consent
+- Basic customer-service chatbot
+- Shareable storefront/product navigation
+- Refined product imagery
 
-## Shop NeatHarbor
+## Checkout Architecture
 
-The public storefront is available here:
-
-**[Open NeatHarbor Goods](https://apexgaze1.github.io/https-github.com-yourusername-your-repository/)**
-
-Customers should use the checkout associated with the specific product they intend to purchase.
-
-## Payment Safety
-
-NeatHarbor uses **Square-hosted checkout** for customer payments.
-
-NeatHarbor does **not** ask customers to send card numbers, CVV/security codes, bank credentials, or payment passwords through website chat, email, or social media.
-
-A checkout path is considered ready only after the product, price, destination, and Square checkout information have been checked against the intended storefront offer.
-
-## NEAT20 Member Offer — Verification Status
-
-> **Status: verification pending**
-
-NEAT20 is intended as a member offer for qualifying merchandise over $30. The discounted checkout path is currently being verified and should **not** be represented as an active, certified discount until an eligible order produces the correct Square-hosted checkout and discounted amount.
-
-Regular product-specific Square checkout remains available independently of this verification.
-
-### Discount verification gate
-
-Before NEAT20 is promoted as active, the flow must confirm:
-
-1. The customer reaches the intended product.
-2. The regular merchandise price is correct.
-3. Eligibility rules are applied correctly.
-4. A genuine Square-hosted checkout is created.
-5. The checkout identifies the correct product.
-6. The checkout displays the correct discounted amount.
-
-Until all six conditions pass, the promotion remains verification-pending.
-
-## Checkout Readiness Standard
-
-A regular checkout path is considered production-ready only when:
-
-1. The storefront product name matches the intended item.
-2. The storefront displays the intended price.
-3. The product opens the intended Square-hosted checkout.
-4. Square displays the correct product and amount.
-5. No known product, price, or checkout-link mismatch remains.
-
-**Payment readiness does not automatically mean fulfillment readiness.**
-
-## Fulfillment Safety Gate
-
-Supplier and fulfillment automation are managed separately from payment processing.
-
-Automatic fulfillment should remain **fail-closed** when an exact supplier variant, SKU mapping, integration credential, or end-to-end bridge has not been verified. An operational Square checkout by itself is not proof that a supplier order will be submitted automatically.
-
-This separation is intentional: customers should never be promised an automated fulfillment path simply because payment collection is working.
-
-## Customer Experience Principles
-
-NeatHarbor is being developed around a few durable rules:
-
-**Clarity over hype.** Product and promotional language should explain what is actually being offered.
-
-**Verification before promotion.** Discounts, checkout behavior, fulfillment automation, and operational claims should be tested before being presented as confirmed.
-
-**Security by design.** Sensitive payment credentials belong in the payment provider's checkout—not in NeatHarbor chat, email, or social messages.
-
-**Useful before complicated.** Store features should make finding, understanding, and buying practical products easier.
-
-**Mobile matters.** The storefront should remain usable for customers arriving from social, search, shared links, or mobile browsers.
-
-## Repository Structure
+Regular purchases follow a deliberately simple path:
 
 ```text
-.
-├── index.html              # Main NeatHarbor storefront
-├── README.md               # Project and operational overview
-└── assets/                 # Storefront and product presentation assets
+Customer
+   ↓
+NeatHarbor product
+   ↓
+Matching product-specific checkout link
+   ↓
+Square-hosted checkout
+   ↓
+Customer completes payment with Square
 ```
 
-The storefront is intentionally lightweight. The current public experience is primarily implemented in `index.html`, with supporting visual assets stored alongside it.
+NeatHarbor does **not** request payment-card numbers, CVV codes, bank credentials, or payment passwords through website chat, email, or social media.
 
-## Product-Code System
+### Regular Checkout Verification
 
-NeatHarbor uses standardized product identifiers beginning with:
+A regular checkout path is considered verified only when all of the following match:
+
+1. Storefront product name
+2. Storefront regular price
+3. Intended product-specific Square URL
+4. Product presented by Square
+5. Amount presented by Square
+
+A valid URL by itself is not sufficient evidence that the entire checkout path is correct.
+
+## NEAT20 Member Checkout
+
+NEAT20 is intended as a member offer for qualifying merchandise over $30.
+
+**Current status: verification pending.**
+
+The storefront must not represent NEAT20 as a verified or guaranteed discount until an end-to-end test demonstrates that the member flow creates a genuine Square-hosted checkout with the correct product and discounted amount.
+
+The intended flow is:
+
+```text
+Customer gives marketing consent
+   ↓
+Member access is issued
+   ↓
+Eligible product is selected
+   ↓
+NeatHarbor backend requests member checkout
+   ↓
+Square-hosted discounted checkout is created
+   ↓
+Product + discounted amount are independently verified
+```
+
+Until that final verification succeeds, regular Square checkout remains the production path.
+
+## Payment Security
+
+Payment processing is separated from the storefront wherever practical.
+
+**Customer safety standard**
+
+- Complete payment only through the matching Square-hosted checkout.
+- Never send card numbers or CVV codes through NeatHarbor chat.
+- Never send banking passwords or payment credentials by email.
+- Never provide payment credentials through social-media messages.
+- Treat unexpected payment requests outside the approved checkout path as unverified.
+
+## Product Identification
+
+NeatHarbor uses standardized product codes beginning with:
 
 ```text
 NHG-
 ```
 
-These codes provide a stable way to identify products independently of marketing copy and make Quick Shop links and future integrations easier to manage.
+These codes provide a stable internal reference for storefront navigation, supplier mapping, checkout verification, and operational troubleshooting.
 
-## Operational Guardrails
+A product's storefront identity, price, checkout URL, supplier variant, and fulfillment mapping should be treated as separate fields and verified independently.
 
-NeatHarbor should not publish or imply unverified claims concerning:
+## Fulfillment Safety Gate
 
-- inventory or stock availability
-- delivery guarantees
-- customer reviews or testimonials
-- scarcity or urgency
-- sales volume
-- guaranteed savings
-- supplier fulfillment automation
-- promotional checkout behavior
+Successful payment does **not** automatically mean supplier fulfillment is automated.
 
-Customer-facing information should reflect the **currently verified state** of the storefront and its connected systems.
+Automatic order submission should remain fail-closed unless the specific product has:
 
-## Current Development Priorities
+- An exact supplier product mapping
+- The correct supplier variant
+- Confirmed pack/count interpretation where applicable
+- Valid fulfillment credentials
+- A functioning integration bridge
+- Successful end-to-end testing
 
-The project is actively improving the customer journey while preserving payment and fulfillment safeguards. Current priorities include completing NEAT20 checkout verification, validating product-to-Square checkout consistency, strengthening fulfillment readiness, improving product presentation, and continuing to refine mobile usability and customer support.
+If any required mapping is ambiguous, the order should require manual review rather than guessing a supplier variant.
 
-## Project Status
+## Repository Structure
 
-**Storefront:** Active  
-**Regular Square integration:** Present in storefront  
-**NEAT20 discounted checkout:** Verification pending  
-**Automatic fulfillment:** Product/integration dependent; not assumed from payment readiness
+The project is intentionally lightweight.
 
-Status language is intentionally conservative so repository documentation does not get ahead of production verification.
+```text
+/
+├── index.html          # Main storefront
+├── README.md           # Project and operating documentation
+└── assets/             # Storefront/product visual assets
+```
 
-## About NeatHarbor Goods
+The storefront currently uses a primarily static front end, while functionality requiring protected credentials or server-side commerce operations must remain outside the public client code.
 
-NeatHarbor Goods is an organization-focused online retail project built around a simple idea:
+## Deployment
 
-### Better organization should make everyday life easier—not more complicated.
+The customer-facing site is published with GitHub Pages from this repository.
 
-The store is being developed product by product and system by system, with emphasis on useful merchandising, straightforward checkout, responsible promotional language, and a customer experience that earns trust through clarity.
+Production changes should follow this sequence:
+
+```text
+Edit
+  ↓
+Review
+  ↓
+Commit
+  ↓
+Deploy
+  ↓
+Verify the public storefront
+  ↓
+Verify affected checkout/customer flows
+```
+
+A successful source commit is not, by itself, proof that a public deployment or external payment flow works correctly.
+
+## Operational Standards
+
+NeatHarbor follows a verification-first approach.
+
+Do not publish or imply unverified claims concerning:
+
+- Discounts or coupon availability
+- Product inventory
+- Delivery dates
+- Customer reviews
+- Sales volume
+- Scarcity or urgency
+- Supplier fulfillment status
+- Automated order processing
+- Profit or savings guarantees
+
+Customer-facing statements should reflect the state that has actually been verified.
+
+## Privacy & Marketing
+
+Marketing email should be sent only to people who have explicitly consented to receive it.
+
+Customer payment credentials should never be collected through the NeatHarbor email signup, chatbot, or social-media channels.
+
+Production credentials, API secrets, private tokens, and supplier/payment authentication material must never be committed to this public repository.
+
+## Release Checklist
+
+Before describing the storefront as fully transaction-ready:
+
+- [ ] Public storefront loads successfully
+- [ ] Product names and prices match the intended catalog
+- [ ] Regular Square links resolve to the matching product and amount
+- [ ] Mobile shopping flow is usable
+- [ ] Shipping and return information is visible
+- [ ] Payment-security messaging is visible
+- [ ] Customer-help functionality works as intended
+- [ ] No secrets or private credentials are exposed in client code
+- [ ] NEAT20 remains marked pending until discounted Square checkout passes end-to-end verification
+- [ ] Automatic fulfillment remains gated until supplier bridge readiness passes end-to-end verification
+
+## Development Priorities
+
+Current priorities are:
+
+1. Complete regular Square checkout verification.
+2. Complete the NEAT20 → backend → Square discounted-checkout test.
+3. Verify fulfillment mappings independently from payment readiness.
+4. Keep customer-facing claims synchronized with verified system status.
+5. Continue improving accessibility, performance, product presentation, and mobile usability.
+
+## Maintenance
+
+This README is intended to function as both a project introduction and a high-level operating reference. Update it whenever the storefront architecture, payment flow, fulfillment state, deployment method, or production-readiness status materially changes.
 
 ---
 
-<div align="center">
+### NeatHarbor Goods
 
-### Ready to explore?
-
-**[Visit NeatHarbor Goods →](https://apexgaze1.github.io/https-github.com-yourusername-your-repository/)**
-
-*Clear the clutter. Make room for life.*
-
-</div>
+**Practical organization. Clear purchasing paths. Verification before promotion.**
