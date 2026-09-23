@@ -1,0 +1,51 @@
+openapi: 3.1.0
+info:
+  title: NeatHarbor Commerce API
+  version: 1.0.0
+  description: Fail-closed commerce integration API for NeatHarbor Goods.
+paths:
+  /api/health:
+    get:
+      summary: Service health
+      responses:
+        "200": { description: Healthy }
+  /api/readiness:
+    get:
+      summary: Provider configuration readiness
+      responses:
+        "200": { description: Ready }
+        "503": { description: Missing required provider configuration }
+  /api/commerce-status:
+    get:
+      summary: Commerce safeguards and configuration status
+      responses:
+        "200": { description: Configured }
+        "503": { description: Not fully configured }
+  /api/catalog:
+    get:
+      summary: Approved fulfillment catalog
+      responses:
+        "200": { description: Exact approved mappings }
+  /api/square-webhook:
+    post:
+      summary: Authenticated Square event ingress
+      responses:
+        "200": { description: Accepted or duplicate event }
+        "403": { description: Invalid Square signature }
+        "503": { description: Webhook not configured }
+  /api/fulfillment/validate:
+    post:
+      summary: Validate an NHG product before supplier submission
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [productCode]
+              properties:
+                productCode: { type: string }
+                quantity: { type: integer, minimum: 1 }
+      responses:
+        "200": { description: Mapping validated; no supplier purchase submitted }
+        "422": { description: Product or quantity not approved }
