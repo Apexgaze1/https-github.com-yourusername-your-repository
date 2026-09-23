@@ -1,0 +1,1 @@
+export default function handler(req,res){res.status(200).json({policy:"authorized-routes-only",credentialBypass:false,automaticSupplierPurchasing:false,routes:{squareWebhook:{path:"/api/square-webhook",requires:["SQUARE_WEBHOOK_SIGNATURE_KEY","SQUARE_WEBHOOK_NOTIFICATION_URL"]},manualReview:{available:true}},platform:"vercel"})}
