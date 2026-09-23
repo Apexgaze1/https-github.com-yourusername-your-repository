@@ -1,0 +1,1 @@
+export default function handler(req,res){res.status(200).json({ok:true,service:"neatharbor-backend",platform:"vercel",timestamp:new Date().toISOString()})}
